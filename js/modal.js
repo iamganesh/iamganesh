@@ -1,9 +1,9 @@
 $(document).ready(function() {
   // MODAL
   var modalText = {
-    discover: {
-      title: 'ChowNow Discover',
-      tag: 'FOOD ORDERING PLATFORM.',
+    customerportal: {
+      title: 'Customer Portal',
+      tag: 'CUSTOMER COMPLAINT PORTAL.',
       detail:
         'ChowNow Discover is a platform that lets customers discover new local restaurants and provides business owners with tools to convert first time orders into lifelong diners.',
       link: 'https://eat.chownow.com/'
@@ -14,12 +14,11 @@ $(document).ready(function() {
       detail:
         'Thunder is a financial service web application, small group of peoples are using, maintaining & viewing their financial shares in grapical view'
     },
-    newrelic: {
-      title: 'NewRelic.com',
-      tag: 'APPLICATION PERFORMANCE MONITORING.',
+    recordmanagement: {
+      title: 'Record Management',
+      tag: 'DOCUMENT MANAGEMENT SYSTEM.',
       detail:
-        'Roambi provides analytics, reporting, and business intelligence for companies to use on the go. A Wordpress hosted site written in PHP and Javascript with Hubspot Integration.',
-      link: 'http://www.newrelic.com'
+        'A document management system for the users to create and manage their product specific documents and approvals.'
     },
     productapproval: {
       title: 'Product Approval',
@@ -33,30 +32,17 @@ $(document).ready(function() {
       detail:
         'Thunder Mobile is a financial service application, small group of peoples are using, maintaining & viewing their financial shares in grapical view'
     },
-    powur: {
-      title: 'Powur.com',
-      tag: 'CONSUMER POWERED MARKETING.',
-      detail:
-        'Powur is a marketing platform for lead generation, recruitment, and team building. Built with Ruby on Rails and Angular-UI. Makes use of Angular-material for front-end visuals. Features complex user tree heiarchy and commission system.',
-      link: 'http://www.powur.com/with/42'
-    },
     staffportal: {
       title: 'Staff Portal',
-      tag: 'Intranet portal',
+      tag: 'INTRANET PORTAL',
       detail:
         'Staff Portal is an intranet portal developed on SharePoint Online for their Asia Specific entities. This portal supports around 13 departments and each department has its own dashboard. This portal is built with SPFx & JavaScript.'
     },
-    never: {
-      title: 'NeverSurrender',
-      tag: 'ALS AWARENESS.',
+    intranet: {
+      title: 'Intranet',
+      tag: 'INTRANET PORTAL.',
       detail:
-        'NeverSurrender is a platform for the new ALS foundation mobile app in hopes to raise awareness and research funding to fight ALS. Pure JavaScript marketing site to promote the new ALS NeverSurrender app.'
-    },
-    themall: {
-      title: 'The Mall',
-      tag: 'PEER GUIDED SHOPPING.',
-      detail:
-        'The Mall is a place to follow the latest fashion purchases of your friends and favorite celebrities. Built with Node.js and Handlebars. Features the ability to import thousands of top brands products into one shopping site.'
+        'Intranet portal developed on SharePoint Server 2019 for a Singapore Government Agency Website. This portal supports around 5 departments and each department has its own dashboard. This portal also supports for grapical reports for active users and records. This portal is built with SPFx & React.'
     }
   };
 

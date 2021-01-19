@@ -403,7 +403,6 @@ nav .link-wrap div.active:hover {
   transition: all 0.3s;
 }
 .modal-wrap .close {
-  bottom: 25px;
   color: #bbb;
   cursor: pointer;
   font-size: 20pt;

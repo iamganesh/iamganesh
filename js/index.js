@@ -184,7 +184,7 @@ $(function() {
     e.preventDefault();
 
     $.ajax({
-      url: 'https://formspree.io/f/mzbkyyzr',
+      url: 'https://formspree.io/f/meqpneag',
       method: 'POST',
       data: { message: $('form').serialize() },
       dataType: 'json'
