@@ -215,9 +215,7 @@ $(function() {
     $.ajax({
       url: 'https://thunder-mailer.herokuapp.com/api/sendmail', //'https://formspree.io/f/meqpneag',
       method: 'POST',
-      contentType: 'application/json',
-      headers: {'Access-Control-Allow-Origin': '*'},
-      data: JSON.stringify({
+      data: {
         sendername : $("#us_name").val(),
         to : "kganeshkumar996@gmail.com",
         cc : "vacuumcorporation19@gmail.com",
@@ -230,7 +228,8 @@ $(function() {
                 <p>Regards,</p>
                 <p>${$("#us_name").val()}</p>
                 <p>${$("#us_mail").val()}</p>`
-      })
+      },
+      dataType : 'json'
     }).done(function(response) {
       $('#success').addClass('expand');
       $('#contact-form')
