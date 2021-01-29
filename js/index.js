@@ -183,17 +183,46 @@ $(function() {
   $('#contact-form').submit(function(e) {
     e.preventDefault();
 
-    $.ajax({
-      url: 'https://formspree.io/f/meqpneag',
-      method: 'POST',
-      data: { message: $('form').serialize() },
-      dataType: 'json'
-    }).done(function(response) {
+    fetch("https://thunder-mailer.herokuapp.com/api/sendmail",{
+      method : 'post',
+      headers : {
+          Accept: 'application/json',
+          'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+          sendername : $("#us_name").val(),
+          to : "kganeshkumar996@gmail.com",
+          cc : "vacuumcorporation19@gmail.com",
+          subject : "My Site : User Contact",
+          html : `<p>Hi Ganesh Kumar,</p>
+                  <p><br/></p>
+                  <p>${$("#us_message").val()}</p>
+                  <p><span style="font-size: 11px; color: rgb(209, 72, 65);">This mail is system generated mail, don&apos;t reply to this mail.</span></p>
+                  <p><br/></p>
+                  <p>Regards,</p>
+                  <p>${$("#us_name").val()}</p>
+                  <p>${$("#us_mail").val()}</p>`
+      })
+    }).then(response => response.json()).then((val) => {
       $('#success').addClass('expand');
       $('#contact-form')
         .find('input[type=text], input[type=email], textarea')
         .val('');
+    }).catch(err =>{
+        console.log(err)
     });
+
+    // $.ajax({
+    //   url: 'https://formspree.io/f/meqpneag',
+    //   method: 'POST',
+    //   data: { message: $('form').serialize() },
+    //   dataType: 'json'
+    // }).done(function(response) {
+    //   $('#success').addClass('expand');
+    //   $('#contact-form')
+    //     .find('input[type=text], input[type=email], textarea')
+    //     .val('');
+    // });
   });
 
   $('#close').click(function() {
