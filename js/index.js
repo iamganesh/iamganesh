@@ -213,7 +213,7 @@ $(function() {
     // });
 
     $.ajax({
-      url: 'http://localhost:8080/api/sendmail', //'https://thunder-mailer.herokuapp.com/api/sendmail', //'https://formspree.io/f/meqpneag',
+      url: 'https://thunder-mailer.herokuapp.com/api/sendmail', //'https://formspree.io/f/meqpneag',
       method: 'POST',
       contentType: 'application/json',
       headers: {'Access-Control-Allow-Origin': '*'},
